@@ -12,6 +12,15 @@ return cloneref(game:GetService(v));
 end});
 local Workspace, RunService, UserInputService, Players, LocalPlayer, Camera, GuiService, Mouse, OsClock, Clone_Lighting, TweenService = cloneref(game:GetService("Workspace")), cloneref(game:GetService("RunService")), cloneref(game:GetService("UserInputService")), cloneref(game:GetService("Players")), cloneref(game:GetService("Players")).LocalPlayer, cloneref(game:GetService("Workspace").CurrentCamera), cloneref(game:GetService("GuiService")), cloneref(game:GetService("Players")).LocalPlayer:GetMouse(), os.clock(), cloneref(game:GetService("Lighting")), game:GetService("TweenService")
 
+local players: Players = clone_reference(game:GetService("Players"))
+local run_service: RunService = clone_reference(game:GetService("RunService"))
+local replicated_storage: ReplicatedStorage = clone_reference(game:GetService("ReplicatedStorage"))
+local user_input_service: UserInputService = clone_reference(game:GetService("UserInputService"))
+local lighting: Lighting = clone_reference(game:GetService("Lighting"))
+local core_gui: CoreGui = clone_reference(game:GetService("CoreGui"))
+local http_service: HttpService = clone_reference(game:GetService("HttpService"))
+local local_player = players.LocalPlayer
+
 local nodes = workspace:FindFirstChild("Nodes")
 local military = workspace:FindFirstChild("Military")
 local drops = workspace:FindFirstChild("Drops")
